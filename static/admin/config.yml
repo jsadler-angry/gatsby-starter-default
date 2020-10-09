@@ -1,6 +1,6 @@
 backend:
   name: github
-  # repo: [jsadler-angry]/[gatsby-starter-default]
+  repo: jsadler-angry/gatsby-starter-default
 
 media_folder: static/assets
 public_folder: assets
