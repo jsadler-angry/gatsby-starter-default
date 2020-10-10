@@ -9,7 +9,7 @@ import { graphql } from "gatsby"
 export const query = graphql`
   query {
     allFile(
-      filter: { sourceInstanceName: { eq: "content" }, name: { eq: "index" } }
+      filter: { sourceInstanceName: { eq: "content" }, name: { eq: "about" } }
     ) {
       edges {
         node {
@@ -28,30 +28,31 @@ export const query = graphql`
 
 const HeaderWrapper = styled.div`
   margin-bottom: 1.45rem;
-  background-image: url(${require(`../../static/assets/IMG_0202.jpeg`)});
+  background-image: url(${require(`../../static/assets/AAM_About_hero2.jpg`)});
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  height: 54em;
+  height: 34em;
 `
 
-const IndexPage = props => {
+const AboutPage = props => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
   return (
     <div>
-
       <Layout>
       <HeaderWrapper></HeaderWrapper>
-        <SEO title="Home" />
+
+        <SEO title="About" />
         <h1>{data.title}</h1>
         <p>{data.intro}</p>
         <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
           <img src={data.image} alt="" />
         </div>
+
         <Link to="/about/">Go to page 2</Link> <br />
         <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
       </Layout>
     </div>
   )
 }
-export default IndexPage
+export default AboutPage

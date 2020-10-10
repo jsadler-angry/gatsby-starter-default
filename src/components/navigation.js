@@ -8,7 +8,7 @@ const MenuWrapper = styled.div`
   height: 1em;
   display: inline-block;
   float: right;
-  margin-top: -4rem;
+  margin-top: 2rem;
   li {
     display: inline-block;
     list-style: none;

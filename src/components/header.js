@@ -15,15 +15,16 @@ import Nav from "./navigation"
 const Logo = styled.div`
   display: inline-block;
   padding: 0.5rem 0.5rem;
+  width: 400px;
 
   img {
-    width: 25%;
+    width: 50%%;
   }
 `
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `transparent`,
+      background: `#333`,
       marginBottom: `1.45rem`,
       borderBottom: `1px solid #fff`,
     }}
