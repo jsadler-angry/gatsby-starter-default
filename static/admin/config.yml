@@ -16,3 +16,10 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Intro text, name: intro, widget: text }
           - { label: Image, name: image, widget: image }
+      label: "About Page"
+        name: "about"
+        file: "content/about.md"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro text, name: intro, widget: text }
+          - { label: Image, name: image, widget: image }
