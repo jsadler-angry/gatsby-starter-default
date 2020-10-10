@@ -9,16 +9,16 @@ collections:
   - label: "Pages"
     name: "pages"
     files:
-      - label: "Home Page"
+      - file: "content/index.md"
+        label: "Home Page"
         name: "home"
-        file: "content/index.md"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro text, name: intro, widget: text }
           - { label: Image, name: image, widget: image }
-      label: "About Page"
+      - file: "content/about.md"
+        label: "About Page"
         name: "about"
-        file: "content/about.md"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro text, name: intro, widget: text }
