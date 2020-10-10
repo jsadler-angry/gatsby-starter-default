@@ -27,12 +27,23 @@ export const query = graphql`
 `
 
 const HeaderWrapper = styled.div`
-  margin-bottom: 1.45rem;
-  background-image: url(${require(`../../static/assets/AAM_About_hero2.jpg`)});
+margin-bottom: 1.45rem;
+background-image: url(${require(`../../static/assets/AAM_About_hero2.jpg`)});
   background-size: cover;
+  background-color: grey;
   background-repeat: no-repeat;
   background-attachment: scroll;
   height: 34em;
+  text-align: center;
+  padding 0 15rem;
+
+  h1 {
+    color: #fff;
+    padding: 2em 0 2em
+  }
+  p {
+    color: #fff;
+  }
 `
 
 const AboutPage = props => {
@@ -40,7 +51,10 @@ const AboutPage = props => {
   return (
     <div>
       <Layout>
-      <HeaderWrapper></HeaderWrapper>
+      <HeaderWrapper>
+      <h1>{data.title}</h1>
+        <p>{data.intro}</p>
+      </HeaderWrapper>
 
         <SEO title="About" />
         <h1>{data.title}</h1>
@@ -48,9 +62,6 @@ const AboutPage = props => {
         <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
           <img src={data.image} alt="" />
         </div>
-
-        <Link to="/about/">Go to page 2</Link> <br />
-        <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
       </Layout>
     </div>
   )

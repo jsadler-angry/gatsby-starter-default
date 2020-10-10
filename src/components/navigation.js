@@ -4,7 +4,7 @@ import React from "react"
 import styled from "styled-components"
 
 const MenuWrapper = styled.div`
-  margin-bottom: 1.45rem;
+
   height: 1em;
   display: inline-block;
   float: right;
@@ -44,7 +44,7 @@ const Navigation = ({ siteTitle }) => (
       </li>
       <li>
         <Link
-          to="/work"
+          to="/"
           style={{
             color: `white`,
             textDecoration: `none`,
