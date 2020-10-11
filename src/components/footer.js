@@ -5,9 +5,8 @@ import styled from "styled-components"
 
 const FooterMenuWrapper = styled.footer`
   height: 10em;
-  background-color: #333;
+  background-color: #191618;
   display: inline-block;
-  margin-top: 2rem;
   padding-top: 4rem;
   width: 100%;
   color: #fff;

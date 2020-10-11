@@ -2,6 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
+import 'bootstrap/dist/css/bootstrap.css';
+import Button from 'react-bootstrap/Button';
+
 // import Image from "../components/image"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
@@ -27,7 +30,6 @@ export const query = graphql`
 `
 
 const HeaderWrapper = styled.div`
-  margin-bottom: 1.45rem;
   background-image: url(${require(`../../static/assets/IMG_0202.jpeg`)});
   background-size: cover;
   background-color: grey;
@@ -45,6 +47,11 @@ const HeaderWrapper = styled.div`
     color: #fff;
   }
 `
+const HomeIntro2 = styled.div`
+    color: #fff;
+    background-color: black;
+    padding: 2em;
+`
 
 const IndexPage = props => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
@@ -54,15 +61,21 @@ const IndexPage = props => {
       <HeaderWrapper>
       <h1>{data.title}</h1>
       <p>{data.intro}</p>
+      <Button>Learn More</Button>
       </HeaderWrapper>
         <SEO title="Home" />
-        <h1>{data.title}</h1>
-        <p>{data.intro}</p>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-          <img src={data.image} alt="" />
+        <HomeIntro2>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+            <h2>{data.title}</h2>
+            </div>
+            <div className="col-lg-6">
+            <p>{data.intro}</p>
+            </div>
+          </div>
         </div>
-        <Link to="/about/">Go to page 2</Link> <br />
-        <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+        </HomeIntro2>
       </Layout>
     </>
   )

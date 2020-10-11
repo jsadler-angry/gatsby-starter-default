@@ -14,7 +14,7 @@ import Nav from "./navigation"
 // `
 const Logo = styled.div`
   display: inline-block;
-  padding: 0.5rem 0.5rem;
+  padding: 0.8rem 0.5rem 0rem;
   width: 400px;
 
   img {
@@ -24,7 +24,7 @@ const Logo = styled.div`
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `#333`,
+      background: `#191618`,
       borderBottom: `1px solid #fff`,
     }}
   >
